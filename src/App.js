@@ -1,12 +1,24 @@
-import './App.css';
-import Form from './Form';
+import * as React from "react";
+import { useForm } from "react-hook-form";
 
-function App() {
+export default function App() {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => alert(JSON.stringify(data));
+
   return (
-    <div className="App">
-      <Form />
-    </div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input name="firstName" ref={register} placeholder="First name" />
+
+      <input name="lastName" ref={register} placeholder="Last name" />
+
+      <select name="category" ref={register}>
+        <option value="">Select...</option>
+        <option value="A">Category A</option>
+        <option value="B">Category B</option>
+      </select>
+
+      <input type="submit" />
+    </form>
   );
 }
-
-export default App;
