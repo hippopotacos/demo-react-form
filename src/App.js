@@ -1,24 +1,23 @@
-import * as React from "react";
-import { useForm } from "react-hook-form";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import About from './About';
+import Home from './Home';
 
-export default function App() {
-  const { register, handleSubmit } = useForm();
-
-  const onSubmit = (data) => alert(JSON.stringify(data));
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input name="firstName" ref={register} placeholder="First name" />
-
-      <input name="lastName" ref={register} placeholder="Last name" />
-
-      <select name="category" ref={register}>
-        <option value="">Select...</option>
-        <option value="A">Category A</option>
-        <option value="B">Category B</option>
-      </select>
-
-      <input type="submit" />
-    </form>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <div>
+            <Navbar /><hr/>
+            <Route exact path='/' component={Home}/>
+            <Route path='/About' render={ () => <About name={'Tom'}/> }/>
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
+
+export default App;
