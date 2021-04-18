@@ -7,7 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.survey {
+  width: 74.667%;
+  margin-left: 2.667%;
+}
+
+.survey:first-child {
+  margin-left: 12.8%;
+}
+
+.survey:last-child {
+  margin-right: 12.8%;
 }
