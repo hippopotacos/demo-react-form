@@ -6,8 +6,6 @@ const CalcTime = props => {
   const msecDiff = nowTime.getTime() - postTime.getTime();
   const dayDiff = Math.floor(msecDiff / 1000 / 60 / 60 / 24);
 
-
-
   return(
     <div>
       {dayDiff}日前
