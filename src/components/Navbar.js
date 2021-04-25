@@ -6,10 +6,11 @@ class Navbar extends React.Component {
     render(){
         return(
             <div>
-                <div className={styles.nav}>
-                    <Link to="/pages/Home">Home</Link>
-                    <Link to="/pages/About">About</Link>
-                </div>
+                <ul className={styles.nav}>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/pages/About">About</Link></li>
+                    <li><Link to="/pages/PastTime">PastTime</Link></li>
+                </ul>
             </div>
         )
     }
