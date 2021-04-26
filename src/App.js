@@ -4,6 +4,8 @@ import About from './pages/About';
 import Home from './Home';
 import PastTime from './pages/PastTime'
 import PastTimeData from './data/PastTimeData';
+import Questionnaire from './pages/Questionnaire';
+import QuestionnaireData from './data/QuestionnaireData';
 
 class App extends Component {
   render() {
@@ -16,6 +18,11 @@ class App extends Component {
             <Route path='/pages/PastTime'>
               <PastTime
                 pastTimeData = {PastTimeData}
+              />
+            </Route>
+            <Route path='/pages/Questionnaire'>
+              <Questionnaire
+                questionnaireData = {QuestionnaireData}
               />
             </Route>
           </div>
