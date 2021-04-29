@@ -6,6 +6,7 @@ import PastTime from './pages/PastTime'
 import PastTimeData from './data/PastTimeData';
 import Questionnaire from './pages/Questionnaire';
 import QuestionnaireData from './data/QuestionnaireData';
+import Form from './pages/Form';
 
 class App extends Component {
   render() {
@@ -24,6 +25,9 @@ class App extends Component {
               <Questionnaire
                 questionnaireData = {QuestionnaireData}
               />
+            </Route>
+            <Route path='/pages/Form'>
+              <Form />
             </Route>
           </div>
         </Router>
