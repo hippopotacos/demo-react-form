@@ -13,6 +13,7 @@ class Navbar extends React.Component {
                     <li><Link to="/pages/Questionnaire">Questionnaire</Link></li>
                     <li><Link to="/pages/Form">Form</Link></li>
                     <li><Link to="/pages/WordCount">WordCount</Link></li>
+                    <li><Link to="/pages/ShareUrl">ShareUrl</Link></li>
                 </ul>
             </div>
         )

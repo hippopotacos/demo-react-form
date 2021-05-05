@@ -8,6 +8,7 @@ import Questionnaire from './pages/Questionnaire';
 import QuestionnaireData from './data/QuestionnaireData';
 import Form from './pages/Form';
 import WordCount from './pages/WordCount.js';
+import ShareUrl from './pages/ShareUrl.js';
 
 class App extends Component {
   render() {
@@ -32,6 +33,9 @@ class App extends Component {
             </Route>
             <Route path='/pages/WordCount'>
               <WordCount />
+            </Route>
+            <Route path='/pages/ShareUrl'>
+              <ShareUrl />
             </Route>
           </div>
         </Router>
