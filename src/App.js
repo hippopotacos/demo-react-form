@@ -7,6 +7,7 @@ import PastTimeData from './data/PastTimeData';
 import Questionnaire from './pages/Questionnaire';
 import QuestionnaireData from './data/QuestionnaireData';
 import Form from './pages/Form';
+import WordCount from './pages/WordCount.js';
 
 class App extends Component {
   render() {
@@ -28,6 +29,9 @@ class App extends Component {
             </Route>
             <Route path='/pages/Form'>
               <Form />
+            </Route>
+            <Route path='/pages/WordCount'>
+              <WordCount />
             </Route>
           </div>
         </Router>
