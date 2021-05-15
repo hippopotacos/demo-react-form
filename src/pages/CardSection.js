@@ -23,21 +23,30 @@ const CARD_ELEMENT_OPTIONS = {
   },
 };
 
-function CardSection() {
+const CardSection = props => {
+  
+  const handleChange = async (event) => {
+    // CardElement の変更を確認する
+    // 顧客がカードの詳細を入力する際にエラーを表示する
+    props.setDisabled(event.empty);
+    props.setError(event.error ? event.error.message : "");
+  };
+
   return (
     <div>
-        <label>
-            <p>カード番号</p>
-            <CardNumberElement options={CARD_ELEMENT_OPTIONS} />
-        </label>
-        <label>
-          <p>セキュリティコード</p>
-            <CardCvcElement options={CARD_ELEMENT_OPTIONS} />
-        </label>
-        <label>
-          <p>有効期限</p>
-          <CardExpiryElement options={CARD_ELEMENT_OPTIONS} />
-        </label>
+      <label>
+        <p>カード番号</p>
+        <CardNumberElement options={CARD_ELEMENT_OPTIONS} onChange={handleChange} />
+      </label>
+      <label>
+        <p>セキュリティコード</p>
+          <CardCvcElement options={CARD_ELEMENT_OPTIONS} onChange={handleChange} />
+      </label>
+      <label>
+        <p>有効期限</p>
+        <CardExpiryElement options={CARD_ELEMENT_OPTIONS} onChange={handleChange} />
+      </label>
+      {props.error && <p>カード情報を正しく入力してください</p>}
     </div>
     
   );
